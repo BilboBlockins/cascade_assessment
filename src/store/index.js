@@ -4,7 +4,7 @@ import UserData from '@/data/user.js'
 
 export default createStore({
   state: {
-    statement: StatementData,
+    statement: StatementData.Statement,
     user: UserData
   },
   mutations: {
