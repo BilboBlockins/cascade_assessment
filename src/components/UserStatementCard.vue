@@ -1,4 +1,5 @@
 <template>
+
   <div class="user-card">
     <div class="bold">
       <div class="row-between">
@@ -7,14 +8,12 @@
       </div>
 
       <div class="row-right">Account #: {{user.accountNumber}}</div>
-
       <div class="row-right">Account Type: {{ user.accountType }}</div>
       <div>Statement Date: {{ statementDate }}</div>
       <div>Statement Balance: {{ statementBalance }}</div>
 
       <div>Current Balance: {{ currentBalance }}</div>
     </div>
-
 
       <div v-if="$store.state.statement.NotSettled.length">
         <div class="break-line"></div>
@@ -35,8 +34,8 @@
           </div>
         </div>
       </div>
-
   </div>
+
 </template>
 
 <script>
@@ -72,13 +71,11 @@ export default {
     )
   },
   updated() {
-    console.log("component updated")
     this.currentBalance = this.getCurrentBalance()
   },
   methods: {
     getDate(tx) {
-      return new Date(tx.TransactionDate).toLocaleDateString()
-      
+      return new Date(tx.TransactionDate).toLocaleDateString() 
     },
     getBalance(tx) {
       return this.getCurrencyString(tx.AvailableBalance)
@@ -109,13 +106,11 @@ export default {
         let oldestTx = txs[0]
         //find oldest
         for(let i=0; i<txs.length; i++) {
-          console.log(new Date(txs[i].TransactionDate))
           if(new Date(txs[i].TransactionDate) < oldestDate) {
             oldestDate = new Date(txs[i].TransactionDate)
             oldestTx = txs[i]
           }
         }
-        console.log(oldestTx)
         return oldestTx
       } else {
         return null
@@ -168,8 +163,4 @@ export default {
   font-size: 18px;
   text-decoration: underline;
 }
-/* .column-center {
-  display: flex;
-  justify-content: center;
-} */
 </style>

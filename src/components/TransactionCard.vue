@@ -20,8 +20,8 @@
         </div>
         <div class="spacer"></div>
     </div>
-
   </div>
+  
 </template>
 
 <script>
@@ -54,7 +54,6 @@ export default {
       })
     },
     payInstantly() {
-      console.log(this.transaction)
       this.$store.dispatch('payPending', this.transaction)
     }
   }

@@ -9,17 +9,16 @@ export default createStore({
   },
   mutations: {
     UPDATE_STATEMENT(state, payload) {
-      console.log(state, payload)
+      state.statement = payload
     },
     UPDATE_USER(state, payload) {
-      console.log(state, payload)
+      state.user = payload
     }
   },
   actions: {
     setUserBalances(context, payload) {
       let userState = context.state.user
       let newUserState = {...userState, ...payload}
-      console.log("from user state action: ", newUserState)
       context.commit('UPDATE_USER', newUserState)
     },
     payPending(context, payload) {
@@ -35,9 +34,7 @@ export default createStore({
         }
         return tx
       })
-      console.log('new txs from payp:', newTxs)
       newStatement.Transactions = newTxs
-      console.log('in remove pending:', payload)
       context.commit('UPDATE_STATEMENT', newStatement)
     }
   }

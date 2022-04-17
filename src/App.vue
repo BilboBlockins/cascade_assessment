@@ -6,7 +6,6 @@
 </template>
 
 <script>
-
 import UserStatementCard from '@/components/UserStatementCard.vue'
 import TopBar from '@/components/TopBar.vue'
 
@@ -14,12 +13,8 @@ export default {
   components: {
     TopBar,
     UserStatementCard
-  },
-  mounted() {
-    console.log(this.$store.state)
   }
 }
-
 </script>
 
 <style>
