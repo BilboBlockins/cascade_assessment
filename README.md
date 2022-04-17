@@ -2,7 +2,9 @@
 
 Vue Component Creation Exercise
 
-See LIVE PROJECT HERE:
+[SEE LIVE HERE](https://bilboblockins.github.io/cascade_assessment_live/)
+
+![Screenshot](solution_image.png)
 
 ## Project setup
 ```
