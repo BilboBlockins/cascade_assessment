@@ -16,6 +16,11 @@ export default createStore({
     }
   },
   actions: {
-    //...
+    setUserBalances(context, payload) {
+      let userState = context.state.user
+      let newUserState = {...userState, ...payload}
+      console.log("from user state action: ", newUserState)
+      context.commit('UPDATE_USER', newUserState)
+    }
   }
 })
