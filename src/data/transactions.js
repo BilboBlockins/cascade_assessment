@@ -1,3 +1,4 @@
+//Added a transaction id to use as an iterator key (and probably a primary key in the transaction database)
 export default {
 	"Statement": {
 		"Transactions": [{
@@ -11,7 +12,8 @@ export default {
 			"Description": "Other: POS Transaction",
 			"Billed": false,
 			"MerchantName": "Good Buy",
-			"MerchantId": "GbLV-01"
+			"MerchantId": "GbLV-01",
+      "TransactionId": 1
 		},
     {
 			"OriginalTraceAuditNo": null,
@@ -24,7 +26,8 @@ export default {
 			"Description": "Other: POS Transaction",
 			"Billed": false,
 			"MerchantName": "Wally World",
-			"MerchantId": "WWV-000-1220"
+			"MerchantId": "WWV-000-1220",
+      "TransactionId": 2
 		},
     {
 			"OriginalTraceAuditNo": null,
@@ -37,7 +40,8 @@ export default {
 			"Description": "Other: POS Transaction",
 			"Billed": true,
 			"MerchantName": "Quickly Gas Stop",
-			"MerchantId": "QGS-01"
+			"MerchantId": "QGS-01",
+      "TransactionId": 3
 		}],
 		"NotSettled": [{
 			"OriginalTraceAuditNo": null,
@@ -49,7 +53,8 @@ export default {
 			"Amount": 12.08,
 			"Description": "Other: POS Transaction",
 			"MerchantName": "Good Buy",
-			"MerchantId": "GbLV-01"
+			"MerchantId": "GbLV-01",
+      "TransactionId": 1
 		},
     {
 			"OriginalTraceAuditNo": null,
@@ -61,7 +66,8 @@ export default {
 			"Amount": 129.74,
 			"Description": "Other: POS Transaction",
 			"MerchantName": "Wally World",
-			"MerchantId": "WWV-000-1220"
+			"MerchantId": "WWV-000-1220",
+      "TransactionId": 2
 		}]
 	}
 }
