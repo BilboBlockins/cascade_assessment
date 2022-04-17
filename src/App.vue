@@ -1,26 +1,42 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <top-bar/>
+  <div class="container">
+    <user-statement-card :user="$store.state.user"/>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
+import UserStatementCard from '@/components/UserStatementCard.vue'
+import TopBar from '@/components/TopBar.vue'
 
 export default {
-  name: 'App',
   components: {
-    HelloWorld
+    TopBar,
+    UserStatementCard
+  },
+  mounted() {
+    console.log(this.$store.state)
   }
 }
+
 </script>
 
 <style>
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
 }
 </style>
