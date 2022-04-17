@@ -160,7 +160,7 @@ export default {
 }
 
 .welcome {
-  font-size: 18px;
+  font-size: 15px;
   text-decoration: underline;
 }
 </style>
